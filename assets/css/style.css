@@ -20,7 +20,7 @@
    * COLORS
    */
 
-  --gold-crayola: hsl(38, 61%, 73%);
+  --gold-crayola: #236DC0;
   --quick-silver: hsla(0, 0%, 65%, 1);
   --davys-grey: hsla(30, 3%, 34%, 1);
   --smoky-black-1: hsla(40, 12%, 5%, 1);
@@ -332,7 +332,8 @@ body.nav-active { overflow: hidden; }
 
 .btn {
   position: relative;
-  color: var(--gold-crayola);
+  background-color: var(--gold-crayola);
+  color: #fff;
   font-size: var(--fontSize-label-2);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
@@ -703,10 +704,11 @@ body.nav-active { overflow: hidden; }
 
 .navbar-link {
   position: relative;
-  font-size: var(--fontSize-label-2);
   text-transform: uppercase;
   padding-block: 10px;
   max-width: unset;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .navbar-link::after { display: none; }
@@ -714,7 +716,7 @@ body.nav-active { overflow: hidden; }
 .navbar-link .span { transition: var(--transition-1); }
 
 .navbar-link:is(:hover, :focus-visible, .active) .span {
-  color: var(--gold-crayola);
+  color: yellow;
   transform: translateX(20px);
 }
 
@@ -1477,6 +1479,11 @@ textarea.input-field {
    * TOPBAR
    */
 
+   h2 {
+    font-size: 52px;
+    color: yellow;
+   }
+
   .topbar {
     display: block;
     position: fixed;
@@ -1487,6 +1494,7 @@ textarea.input-field {
     border-block-end: 1px solid var(--white-alpha-20);
     z-index: 4;
     transition: var(--transition-1);
+    background-color: var(--gold-crayola);
   }
 
   .topbar:has(~ .header.active) { transform: translateY(-100%); }
